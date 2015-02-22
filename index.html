@@ -2,7 +2,7 @@
 	<head>
 	<title>864 Startups</title>
 		<script type="text/javascript" src="js/ICanHaz.js"></script>
-		<script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+		<script type="text/javascript" src='http://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
 		<script type="text/javascript" src='js/jquery.js '></script>
 		<script type="text/javascript" src='js/tabletop1.3.4.js'></script>
 		<script type="text/javascript" src='js/sheetsee.js'></script>
@@ -10,7 +10,7 @@
 		<link rel="shortcut icon" href="https://raw.github.com/jlord/hack-spots/master/favico.png"/>
  
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+		<link href='http://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic'>
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700'>
 		<link media="screen" rel="stylesheet" type="text/css" href="css/style.css">
@@ -205,7 +205,7 @@
 		  var geoJSON = highlightLastMarker(geoJSONnoHL, "#FF4646")
 
 		  // create map, tilelayer (map background), markers and popups
-			var map = Sheetsee.loadMap("map")
+			var map = L.mapbox.map('map', 'examples.map-i86nkdio')
 			Sheetsee.addTileLayer(map, 'examples.map-i86nkdio')
 			var markerLayer = Sheetsee.addMarkerLayer(geoJSON, map, 13)
 			addPopups(map, markerLayer)
