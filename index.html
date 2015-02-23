@@ -173,19 +173,7 @@
 			  map.panTo(selectedCoords, 13)
 	 		})
 
-	  	// so that the first map and info that loads
-	  	// is complete and doesn't show rows that are
-	  	// actively being edited by folk
-	  	function findLatestCompleteSpot(data) {
-	  		var latestCompleteSpot = []
-	  		var startWithLatestRow = data.reverse()
-	  		startWithLatestRow.forEach(function(row){
-	  			if (!row.lat || !row.long || !row.name || !row.address || !row.city || !row.state ) return
-	  			else latestCompleteSpot.push(row)
-	  		})
-	  		return latestCompleteSpot[0]
-	  	}
-
+	  
 	  	// find the latest spot with the most important
 	  	// info filled in (to prevent map breaking if
 	  	// someone is currently editing spreadsheet)
